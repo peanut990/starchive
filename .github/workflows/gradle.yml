@@ -36,7 +36,7 @@ jobs:
 
     - name: Build with Gradle
       run: |
-        cd ~/BACK/spring-app/
+        cd BACK/spring-app/
         ./gradlew build
 
   dependency-submission:
