@@ -22,7 +22,7 @@ jobs:
     # 3. 의존성 설치
     - name: Install dependencies
       run: |
-        cd starchive/FRONT
+        cd FRONT/
         npm install
 
     # 4. 코드 린트 테스트
