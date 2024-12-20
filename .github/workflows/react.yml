@@ -1,0 +1,36 @@
+name: React CI
+
+on:
+  pull_request:
+    branches: [ "develop" ]
+
+jobs:
+  build-and-test:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    # 1. 코드 체크아웃
+    - uses: actions/checkout@v4
+
+    # 2. Node.js 환경 설정
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+
+    # 3. 의존성 설치
+    - name: Install dependencies
+      run: npm install
+
+    # 4. 코드 린트 테스트
+    - name: Run lint
+      run: npm run lint
+
+    # 5. 유닛 테스트 실행
+    - name: Run tests
+      run: npm test -- --watchAll=false
+
+    # 6. 애플리케이션 빌드
+    - name: Build application
+      run: npm run build
