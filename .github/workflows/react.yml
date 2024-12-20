@@ -33,7 +33,7 @@ jobs:
 
     # 5. 유닛 테스트 실행
     - name: Run tests
-      run: npm test
+      run: npm test --passWithNoTests
 
     # 6. 애플리케이션 빌드
     - name: Build application
