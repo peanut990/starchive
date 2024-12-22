@@ -30,12 +30,13 @@ jobs:
 
     - name: Execute Deployment Script on EC2
       run: |
-        cd /home/ec2-user/starchive/
         ssh ec2-user@${{ vars.EC2_HOST }} << 'EOF'
-          # 배포 스크립트 실행
+        cd /home/ec2-user/starchive/
+          # 스프링 배포 스크립트 실행
           chmod +x spring-deploy.sh
           ./srping-deploy.sh
           
+          # 리액트 배포 스크립트 실행
           chmod +x react-deploy.sh
           ./react-deploy.sh
         EOF
