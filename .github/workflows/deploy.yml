@@ -1,4 +1,4 @@
-name: Deploy on Merge to main or develop
+name: Deploy on Merge to main
 
 on:
   pull_request:
@@ -41,4 +41,5 @@ jobs:
           
         # 리액트 배포 스크립트 실행
         ./react-deploy.sh
+        
         EOF
