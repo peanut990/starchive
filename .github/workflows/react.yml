@@ -5,7 +5,7 @@ on:
     branches: 
       - develop
     paths:
-      - 'BACK/spring-app/**'
+      - 'FRONT/**'
     
 
 jobs:
