@@ -15,7 +15,7 @@ jobs:
     if: github.event.pull_request.merged == true # PR이 머지된 경우만 실행
     runs-on: ubuntu-latest
     concurrency:
-      group: deploy
+      group: deploy-spring
       cancel-in-progress: true # 이전 실행 중인 워크플로를 취소
 
     steps:
