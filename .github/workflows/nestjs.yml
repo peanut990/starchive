@@ -1,4 +1,4 @@
-name: Node.js CI for NestJS
+name: NestJS CI
 
 on:
   pull_request:
