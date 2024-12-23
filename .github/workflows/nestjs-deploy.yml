@@ -1,4 +1,4 @@
-name: Nest Deploy on Merge to develop
+name: NestJS Deploy on Merge to develop
 
 on:
   pull_request:
