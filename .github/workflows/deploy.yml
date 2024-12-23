@@ -6,7 +6,6 @@ on:
       - closed
     branches:
       - main
-      - develop
 
 jobs:
   deploy:
@@ -32,12 +31,14 @@ jobs:
       run: |
         ssh ec2-user@${{ vars.EC2_HOST }} << 'EOF'
         cd /home/ec2-user/starchive/scripts
-          # 스프링 배포 스크립트 실행
-          ./spring-deploy.sh
+        
+        git checkout main
+        # 스프링 배포 스크립트 실행
+        ./spring-deploy.sh
 
-          # nestjs 배포 스크립트 실행
-          ./nestjs-deploy.sh
+        # nestjs 배포 스크립트 실행
+        ./nestjs-deploy.sh
           
-          # 리액트 배포 스크립트 실행
-          ./react-deploy.sh
+        # 리액트 배포 스크립트 실행
+        ./react-deploy.sh
         EOF
