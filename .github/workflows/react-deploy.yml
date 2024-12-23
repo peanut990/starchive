@@ -1,4 +1,4 @@
-name: Deploy on Merge to develop
+name: React Deploy on Merge to develop
 
 on:
   pull_request:
