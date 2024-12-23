@@ -2,7 +2,11 @@ name: React CI
 
 on:
   pull_request:
-    branches: [ "develop" ]
+    branches: 
+      - develop
+    paths:
+      - 'BACK/spring-app/**'
+    
 
 jobs:
   build-and-test:
