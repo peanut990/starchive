@@ -2,7 +2,10 @@ name: Node.js CI for NestJS
 
 on:
   pull_request:
-    branches: [ "develop" ]
+    branches: 
+      - develop
+    paths:  
+      - 'BACK/nest-app/**'
 
 jobs:
   build:
